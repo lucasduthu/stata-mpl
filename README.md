@@ -26,13 +26,13 @@ Nothing global is changed permanently: everything stays inside the `with` block.
 ## Installation
 
 ```bash
-pip install mpl-stata
+pip install stata-mpl
 ```
 
 For the seaborn wrappers (`boxplot`, `violinplot`, `heatmap`…):
 
 ```bash
-pip install "mpl-stata[seaborn]"
+pip install "stata-mpl[seaborn]"
 ```
 
 Requires `matplotlib>=3.4`, Python ≥ 3.8.

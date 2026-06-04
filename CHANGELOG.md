@@ -35,6 +35,6 @@ First public release.
 - Removed an invalid `legend.bbox_to_anchor` rcParam key that emitted a
   "Bad key" warning on every import.
 
-Install: `pip install mpl-stata`
+Install: `pip install stata-mpl`
 
 [0.3.0]: https://pypi.org/project/mpl-stata/0.3.0/
