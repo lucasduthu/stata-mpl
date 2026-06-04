@@ -35,6 +35,13 @@ Colormaps (heatmaps)
 ``stcolor`` (discrete, 15 colors), ``stata-blue`` (sequential white→navy),
 ``stata-bluered`` (diverging, for correlations), plus ``_r`` variants.
 matplotlib's viridis/plasma/... family is of course still available.
+
+Disclaimer
+----------
+stata_mpl is an independent, unofficial open-source project. It is **not**
+affiliated with, endorsed by, or connected to StataCorp LLC. "Stata" and
+"stcolor" are trademarks/product names of StataCorp LLC, used here only
+descriptively to indicate the visual style this package reproduces.
 """
 from __future__ import annotations
 

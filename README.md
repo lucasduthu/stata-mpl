@@ -50,6 +50,8 @@ with stata_mpl.theme("scatter"):
     sns.scatterplot(df, x="bill_length_mm", y="bill_depth_mm", hue="species", ax=ax)
 ```
 
+![scatter example](https://raw.githubusercontent.com/lucasduthu/stata-mpl/main/assets/scatter.png)
+
 ### Stata-look seaborn wrappers
 
 Seaborn draws box, violin and heatmap charts with its own artists, which ignore
@@ -71,11 +73,17 @@ with stata_mpl.theme():
     stata_mpl.qqplot(df["body_mass_g"])
 ```
 
-Each box/violin keeps the color seaborn assigned to its group, so the per-group
-colors stay correct **even with unbalanced groups**. Each wrapper accepts the
-same arguments as its `sns.*` counterpart and forwards extra keyword arguments to
-it. Already have a seaborn axes you want to fix up? Use
-`stata_mpl.restyle_boxes(ax)`, `restyle_violins(ax)` or `add_heatmap_gap(ax)`.
+![box plot example](https://raw.githubusercontent.com/lucasduthu/stata-mpl/main/assets/boxplot.png)
+
+Each box/violin keeps the color seaborn assigned to its group — correct **even
+with unbalanced groups**. The `heatmap` wrapper uses Stata's native multicolor
+`stata-heat` map and leaves the small gap Stata draws around the cells:
+
+![heatmap example](https://raw.githubusercontent.com/lucasduthu/stata-mpl/main/assets/heatmap.png)
+
+Each wrapper accepts the same arguments as its `sns.*` counterpart and forwards
+extra keyword arguments to it. Already have a seaborn axes you want to fix up?
+Use `stata_mpl.restyle_boxes(ax)`, `restyle_violins(ax)` or `add_heatmap_gap(ax)`.
 
 ## matplotlib — the style-context path
 
@@ -154,6 +162,8 @@ Registered colormaps (for `cmap=...`), on top of native viridis/plasma:
 automatically to `imshow` / `contourf` / `pcolormesh` under the `heatmap`
 overlay, and is the default for `stata_mpl.heatmap()`.
 
+![colormaps](https://raw.githubusercontent.com/lucasduthu/stata-mpl/main/assets/colormaps.png)
+
 ## Reference lines
 
 Inside `theme()`, `ax.axvline` / `ax.axhline` automatically take the Stata
@@ -230,4 +240,19 @@ stata_mpl.notebook_setup()   # or: %config InlineBackend.print_figure_kwargs = {
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE). © 2026 Lucas Duthu.
+
+This is free, community-developed open-source software.
+
+## Disclaimer
+
+**stata-mpl is an independent, unofficial open-source project. It is not
+affiliated with, endorsed by, sponsored by, or connected to StataCorp LLC.**
+
+"Stata" and "stcolor" are trademarks or product names of StataCorp LLC. They are
+used here in a purely descriptive, nominative way: stata-mpl reproduces the
+*visual appearance* of Stata's default graph scheme so that matplotlib/seaborn
+figures look familiar to Stata users. The project ships no StataCorp code, data,
+or assets — the colors and layouts were re-derived independently from publicly
+visible chart output. If you represent StataCorp and have any concern, please
+open an issue.
