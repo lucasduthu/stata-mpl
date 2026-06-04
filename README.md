@@ -2,6 +2,7 @@
 
 [![PyPI](https://img.shields.io/pypi/v/stata-mpl.svg)](https://pypi.org/project/stata-mpl/)
 [![Python](https://img.shields.io/pypi/pyversions/stata-mpl.svg)](https://pypi.org/project/stata-mpl/)
+[![Tests](https://github.com/lucasduthu/stata-mpl/actions/workflows/tests.yml/badge.svg)](https://github.com/lucasduthu/stata-mpl/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 Give your **matplotlib** and **seaborn** charts the look of **Stata 19**
