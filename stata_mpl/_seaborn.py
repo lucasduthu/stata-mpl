@@ -100,7 +100,7 @@ def restyle_boxes(ax, *, median_lw=1.7, box_lw=1.2):
 
 
 def boxplot(data=None, *, x=None, y=None, hue=None, order=None, hue_order=None,
-            ax=None, palette=None, legend_outside=True, **kwargs):
+            ax=None, palette=None, legend_outside=True, gap=0.1, **kwargs):
     """``sns.boxplot`` with Stata's stcolor look and an outside-right legend.
 
     Without ``hue`` every box is light blue (stc1), as in Stata's ``graph box
@@ -115,7 +115,7 @@ def boxplot(data=None, *, x=None, y=None, hue=None, order=None, hue_order=None,
     n_hue = _n_levels(data, hue, hue_order) if hue is not None else 1
 
     draw = dict(data=data, x=x, y=y, hue=hue, order=order, hue_order=hue_order,
-                ax=ax, saturation=1.0, fill=True, linewidth=1.2)
+                ax=ax, saturation=1.0, fill=True, linewidth=1.2, gap=gap)
     if hue is None:
         draw["color"] = cols[0]            # single color -> all boxes stc1
     else:
@@ -168,7 +168,7 @@ def restyle_violins(ax, *, edge_lw=1.1, inner_color="#08234C"):
 
 
 def violinplot(data=None, *, x=None, y=None, hue=None, order=None, hue_order=None,
-               ax=None, palette=None, inner="box", legend_outside=True, **kwargs):
+               ax=None, palette=None, inner="box", legend_outside=True, gap=0.1, **kwargs):
     """``sns.violinplot`` with Stata's stcolor look and an outside-right legend."""
     import seaborn as sns
 
@@ -178,7 +178,7 @@ def violinplot(data=None, *, x=None, y=None, hue=None, order=None, hue_order=Non
     n_hue = _n_levels(data, hue, hue_order) if hue is not None else 1
 
     draw = dict(data=data, x=x, y=y, hue=hue, order=order, hue_order=hue_order,
-                ax=ax, saturation=1.0, fill=True, inner=inner, linewidth=1.1)
+                ax=ax, saturation=1.0, fill=True, inner=inner, linewidth=1.1, gap=gap)
     if hue is None:
         draw["color"] = cols[0]
     else:

@@ -18,7 +18,16 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 import seaborn as sns  # noqa: E402
 
-import stata_mpl  # noqa: E402
+try:
+    import stata_mpl
+except ImportError:
+    import sys, pathlib
+    here = pathlib.Path.cwd()
+    for cand in (here, here.parent, here.parent.parent):
+        if (cand / 'stata_mpl' / '__init__.py').exists():
+            sys.path.insert(0, str(cand)); break
+    import stata_mpl
+
 
 RNG = np.random.default_rng(7)
 ROOT = Path(__file__).resolve().parent.parent
