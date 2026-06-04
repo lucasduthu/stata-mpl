@@ -248,6 +248,17 @@ stata_mpl.notebook_setup()   # or: %config InlineBackend.print_figure_kwargs = {
 - The box/violin restyling targets seaborn ≥ 0.13; on other versions the chart
   still renders (it simply falls back to seaborn's default colors).
 
+## Citation
+
+If you use stata-mpl to produce figures for a publication, you are under no
+obligation to cite it. That said, a mention is always appreciated — it helps
+others discover the project and motivates continued development. A simple
+acknowledgement such as:
+
+> *Figures were produced with [stata-mpl](https://github.com/lucasduthu/stata-mpl).*
+
+works perfectly.
+
 ## License
 
 MIT — see [LICENSE](LICENSE). © 2026 Lucas Duthu.
