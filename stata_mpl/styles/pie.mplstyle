@@ -1,0 +1,18 @@
+# stata_mpl — "pie" overlay (stack on top of "stata")
+# Pie chart: no axes, no grid, thin white separators between wedges.
+# Wedges follow the stcolor palette (axes.prop_cycle).
+
+axes.grid:          False
+axes.spines.left:   False
+axes.spines.bottom: False
+axes.spines.top:    False
+axes.spines.right:  False
+
+xtick.bottom:      False
+ytick.left:        False
+xtick.labelbottom: False
+ytick.labelleft:   False
+
+patch.edgecolor:       white
+patch.force_edgecolor: False
+patch.linewidth:       0.0

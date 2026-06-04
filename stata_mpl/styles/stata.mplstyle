@@ -1,0 +1,126 @@
+# =====================================================================
+# stata_mpl — base style "stata" (Stata 19 scheme: stcolor)
+# Calibrated against the official SVG files exported by Stata 18/19.
+# Combine it with a chart-type overlay, e.g.:
+#     with plt.style.context(["stata", "boxplot"]):
+# =====================================================================
+
+# --- Figure (7.5 x 4.5 inches, like Stata 19) ---
+# dpi 100 is the on-screen/inline size; exports stay crisp via savefig.dpi.
+figure.figsize:     7.5, 4.5
+figure.dpi:         100
+figure.facecolor:   white
+figure.edgecolor:   white
+figure.titlesize:   16
+figure.titleweight: normal
+
+# --- Margins: balanced so the plot reads as centered, wide bottom (Stata) ---
+figure.subplot.left:   0.10
+figure.subplot.right:  0.91
+figure.subplot.bottom: 0.135
+figure.subplot.top:    0.875
+figure.subplot.wspace: 0.20
+figure.subplot.hspace: 0.20
+
+# --- Saving: high-res, no cropping (Stata keeps generous margins) ---
+savefig.dpi:        300
+savefig.facecolor:  white
+savefig.edgecolor:  white
+savefig.bbox:       standard
+
+# --- Font (Helvetica, like Stata) ---
+font.family:     sans-serif
+font.sans-serif: Helvetica, Helvetica Neue, Arial, DejaVu Sans, Liberation Sans, sans-serif
+font.size:       11
+text.color:      black
+
+# --- Plotting region / background ---
+axes.facecolor:  white
+axes.edgecolor:  000000
+axes.linewidth:  0.65
+axes.axisbelow:  True
+
+# --- Frame: left + bottom spines only (like Stata) ---
+axes.spines.top:    False
+axes.spines.right:  False
+axes.spines.left:   True
+axes.spines.bottom: True
+
+# --- Title & axis labels (enlarged titles) ---
+axes.titlesize:     15
+axes.titleweight:   normal
+axes.titlecolor:    black
+axes.titlelocation: center
+axes.titlepad:      10.0
+axes.labelsize:     11.5
+axes.labelcolor:    black
+axes.labelweight:   normal
+axes.labelpad:      6.0
+
+# --- stcolor palette: stc1..stc15 (colorblind-friendly) ---
+axes.prop_cycle: cycler('color', ['1A85FF', 'D41159', '00BF7F', 'FFD400', '4F2C99', 'FF6333', '4DB7FF', '7C0015', '0FEFAF', 'FAA307', '758BFD', 'FED9B7', '08234C', 'F88DAD', '0F5156'])
+
+# --- Grid: horizontal (y), very light gray, long dashes ---
+axes.grid:       True
+axes.grid.axis:  y
+axes.grid.which: major
+grid.color:      F0F0F0
+grid.linestyle:  (0, (6, 3))
+grid.linewidth:  0.9
+grid.alpha:      1.0
+
+# --- Ticks: outward, thin and black (like Stata) ---
+xtick.direction:   out
+ytick.direction:   out
+xtick.color:       000000
+ytick.color:       000000
+xtick.labelcolor:  black
+ytick.labelcolor:  black
+xtick.labelsize:   10.5
+ytick.labelsize:   10.5
+xtick.major.size:  4.0
+ytick.major.size:  4.0
+xtick.major.width: 0.6
+ytick.major.width: 0.6
+xtick.minor.size:  2.5
+ytick.minor.size:  2.5
+xtick.minor.width: 0.5
+ytick.minor.width: 0.5
+xtick.major.pad:   4.0
+ytick.major.pad:   4.0
+xtick.bottom:      True
+xtick.top:         False
+ytick.left:        True
+ytick.right:       False
+
+# --- Lines & markers (small markers, like Stata) ---
+lines.linewidth:       1.8
+lines.markersize:      4.5
+lines.markeredgewidth: 0.0
+lines.solid_capstyle:  round
+lines.dash_capstyle:   round
+
+# --- Patches (bars, areas, wedges) ---
+patch.linewidth:       0.7
+patch.edgecolor:       white
+patch.force_edgecolor: False
+patch.antialiased:     True
+
+# --- Legend: white fill, NO border (like Stata stcolor) ---
+# Note: matplotlib has no rcParam for an *outside* anchor; stata_mpl.legend()
+# (and stata_mpl.theme()) place the legend to the right, outside the frame.
+legend.frameon:        True
+legend.framealpha:     1.0
+legend.facecolor:      white
+legend.edgecolor:      none
+legend.fancybox:       False
+legend.loc:            best
+legend.fontsize:       10
+legend.title_fontsize: 10.5
+legend.borderpad:      0.5
+legend.handlelength:   1.8
+legend.columnspacing:  1.5
+legend.labelspacing:   0.5
+
+# --- Default image / heatmap colormap ---
+image.cmap: viridis

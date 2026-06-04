@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stata-mpl"
+version = "0.3.0"
+description = "Stata 19 (stcolor) styling for matplotlib and seaborn charts."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Lucas Duthu", email = "lucas.duthu@gmail.com" }]
+keywords = ["matplotlib", "seaborn", "stata", "stcolor", "style", "visualization", "dataviz"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Framework :: Matplotlib",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+dependencies = ["matplotlib>=3.4"]
+
+[project.optional-dependencies]
+seaborn = ["seaborn>=0.13"]
+dev = ["pytest", "numpy", "seaborn>=0.13", "scipy", "statsmodels"]
+
+[project.urls]
+Homepage = "https://github.com/lucasduthu/stata-mpl"
+Repository = "https://github.com/lucasduthu/stata-mpl"
+Issues = "https://github.com/lucasduthu/stata-mpl/issues"
+Changelog = "https://github.com/lucasduthu/stata-mpl/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+packages = ["stata_mpl"]
+
+[tool.setuptools.package-data]
+stata_mpl = ["styles/*.mplstyle"]

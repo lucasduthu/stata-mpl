@@ -1,0 +1,43 @@
+# stata_mpl — "boxplot" overlay (stack on top of "stata")
+# Calibrated on Stata's official SVG: boxes filled light blue (#8DC2FF),
+# outline / whiskers / caps / median all in stc1 (#1A85FF).
+# For grouped (hue) box plots with one color per group, use the
+# stata_mpl.boxplot() helper, which reproduces Stata's per-group look.
+
+boxplot.patchartist: True
+
+# Box fill: light blue (lightened stc1), like Stata.
+patch.facecolor: 8DC2FF
+patch.edgecolor: 1A85FF
+
+# Box outline: stc1.
+boxplot.boxprops.color:     1A85FF
+boxplot.boxprops.linewidth: 1.2
+
+# Whiskers: stc1, solid.
+boxplot.whiskerprops.color:     1A85FF
+boxplot.whiskerprops.linestyle: -
+boxplot.whiskerprops.linewidth: 1.2
+
+# Caps: stc1.
+boxplot.capprops.color:     1A85FF
+boxplot.capprops.linewidth: 1.2
+
+# Median: stc1, slightly thicker (stands out on the light fill).
+boxplot.medianprops.color:     1A85FF
+boxplot.medianprops.linewidth: 1.6
+
+# Mean (when showmeans=True): dashed stc2 red.
+boxplot.meanprops.color:     D41159
+boxplot.meanprops.linestyle: --
+boxplot.meanprops.linewidth: 1.4
+
+# Outliers (fliers): small filled stc1 dots.
+boxplot.flierprops.marker:          o
+boxplot.flierprops.markersize:      4.0
+boxplot.flierprops.markerfacecolor: 1A85FF
+boxplot.flierprops.markeredgecolor: 1A85FF
+boxplot.flierprops.markeredgewidth: 0.0
+
+boxplot.showcaps: True
+boxplot.showbox:  True

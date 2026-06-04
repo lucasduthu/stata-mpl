@@ -1,0 +1,10 @@
+# stata_mpl — "bar" overlay (stack on top of "stata")
+# Solid bars, no border (like Stata, no white seam). Colors follow the
+# stcolor palette (or the seaborn hue).
+# For a barh(), move the grid to the x axis: ax.grid(axis="x").
+
+patch.facecolor:       1A85FF
+patch.edgecolor:       none
+patch.force_edgecolor: False
+
+axes.grid.axis: y

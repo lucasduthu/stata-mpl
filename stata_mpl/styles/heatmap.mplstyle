@@ -1,0 +1,17 @@
+# stata_mpl — "heatmap" overlay (stack on top of "stata")
+# imshow() / pcolormesh() / contourf() / sns.heatmap(): no grid, left+bottom
+# axes, Stata's native multicolor "stata-heat" colormap.
+# For a correlation matrix, prefer a diverging map (cmap="stata-bluered",
+# "stata-bluegreen" or "stata-green-red").
+# Stata leaves a small gap between the cells and the axes; the
+# stata_mpl.heatmap() helper adds that gap automatically.
+
+axes.grid:         False
+axes.spines.top:   False
+axes.spines.right: False
+
+image.cmap:   stata-heat
+image.aspect: auto
+
+xtick.direction: out
+ytick.direction: out

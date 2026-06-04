@@ -1,0 +1,10 @@
+# stata_mpl — "errorbar" overlay (stack on top of "stata")
+# Error bars / range-with-cap plots over a continuous x: grid on BOTH axes.
+# For error bars over categories, use ax.grid(axis="y").
+
+errorbar.capsize:      3.0
+lines.linewidth:       1.6
+lines.marker:          o
+lines.markersize:      4.5
+lines.markeredgewidth: 0.0
+axes.grid.axis:        both

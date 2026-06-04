@@ -1,0 +1,11 @@
+# stata_mpl — "violin" overlay (stack on top of "stata")
+# For sns.violinplot / ax.violinplot. Violin colors come from the palette
+# (or the seaborn hue); horizontal grid like other categorical charts.
+# For Stata's per-group look (light fill + colored outline, slim inner box),
+# use the stata_mpl.violinplot() helper.
+
+axes.grid.axis:  y
+patch.facecolor: 8DC2FF
+patch.edgecolor: 1A85FF
+patch.linewidth: 1.0
+lines.linewidth: 1.2

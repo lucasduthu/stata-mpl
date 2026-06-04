@@ -1,0 +1,8 @@
+# stata_mpl — "line" overlay (stack on top of "stata")
+# Solid curves, medium weight, no markers. Both x and y are continuous, so the
+# grid shows on BOTH axes (like Stata). For a categorical x, use ax.grid(axis="y").
+
+lines.linewidth: 2.0
+lines.linestyle: -
+lines.marker:    none
+axes.grid.axis:  both

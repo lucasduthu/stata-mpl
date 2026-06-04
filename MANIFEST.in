@@ -1,0 +1,19 @@
+include LICENSE
+include README.md
+include CHANGELOG.md
+include pyproject.toml
+
+# Ship the style sheets (also declared as package-data for the wheel).
+recursive-include stata_mpl/styles *.mplstyle
+
+# Include tests and example scripts in the source distribution.
+recursive-include tests *.py
+recursive-include examples *.py *.ipynb
+
+# Keep the source distribution clean.
+prune examples/output
+prune assets
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude .DS_Store
+global-exclude .ipynb_checkpoints

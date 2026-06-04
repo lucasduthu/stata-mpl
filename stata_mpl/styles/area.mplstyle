@@ -1,0 +1,9 @@
+# stata_mpl — "area" overlay (stack on top of "stata")
+# Areas / fills. Note: fill_between() and stackplot() follow the stcolor
+# palette (axes.prop_cycle); for transparency, pass alpha=... at call time.
+
+patch.facecolor: 1A85FF
+patch.edgecolor: 1A85FF
+patch.linewidth: 1.0
+lines.linewidth: 1.5
+axes.grid.axis:  y

@@ -1,0 +1,10 @@
+# stata_mpl — "histogram" overlay (stack on top of "stata")
+# Bars filled with stc1 and a thin white seam (stcolor look).
+
+patch.facecolor:       1A85FF
+patch.edgecolor:       white
+patch.force_edgecolor: True
+patch.linewidth:       0.7
+
+hist.bins:      auto
+axes.grid.axis: y

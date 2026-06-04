@@ -1,0 +1,13 @@
+# stata_mpl — "scatter" overlay (stack on top of "stata")
+# Small filled round markers. Works with ax.scatter() AND ax.plot().
+# On a scatter (continuous x/y), Stata shows the grid on BOTH axes.
+
+lines.linestyle:       none
+lines.marker:          o
+lines.markersize:      4.5
+lines.markeredgewidth: 0.0
+
+scatter.marker:     o
+scatter.edgecolors: none
+
+axes.grid.axis: both

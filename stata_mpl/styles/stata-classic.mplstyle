@@ -1,0 +1,113 @@
+# =====================================================================
+# stata_mpl — base style "stata-classic" (historical s2color scheme)
+# Same structure as "stata" but with the classic palette (navy, maroon...)
+# and a solid grid instead of dashes.
+# =====================================================================
+
+# --- Figure ---
+figure.figsize:     7.5, 4.5
+figure.dpi:         100
+figure.facecolor:   white
+figure.edgecolor:   white
+figure.titlesize:   16
+figure.titleweight: normal
+
+# --- Margins: balanced (reads as centered), wide bottom ---
+figure.subplot.left:   0.10
+figure.subplot.right:  0.91
+figure.subplot.bottom: 0.135
+figure.subplot.top:    0.875
+figure.subplot.wspace: 0.20
+figure.subplot.hspace: 0.20
+
+# --- Saving: high-res, no cropping (generous margins) ---
+savefig.dpi:        300
+savefig.facecolor:  white
+savefig.edgecolor:  white
+savefig.bbox:       standard
+
+# --- Font ---
+font.family:     sans-serif
+font.sans-serif: Helvetica, Helvetica Neue, Arial, DejaVu Sans, Liberation Sans, sans-serif
+font.size:       11
+text.color:      black
+
+# --- Plotting region / background ---
+axes.facecolor:  white
+axes.edgecolor:  000000
+axes.linewidth:  0.65
+axes.axisbelow:  True
+
+# --- Frame: left + bottom spines only ---
+axes.spines.top:    False
+axes.spines.right:  False
+axes.spines.left:   True
+axes.spines.bottom: True
+
+# --- Title & axis labels (enlarged titles) ---
+axes.titlesize:     15
+axes.titleweight:   normal
+axes.titlecolor:    black
+axes.titlelocation: center
+axes.titlepad:      10.0
+axes.labelsize:     11.5
+axes.labelcolor:    black
+axes.labelweight:   normal
+axes.labelpad:      6.0
+
+# --- Classic s2color palette (navy, maroon, forest green, dkorange...) ---
+axes.prop_cycle: cycler('color', ['1A476F', '90353B', '55752F', 'E37E00', '6E8E84', 'C10534', '938DD2', 'CAC27E', 'A0522D', '7B92A8', '2D6D66', '9C8847', 'BFA19C', 'FFD200', 'D9E6EB'])
+
+# --- Grid: horizontal (y), light gray, solid ---
+axes.grid:       True
+axes.grid.axis:  y
+axes.grid.which: major
+grid.color:      E6E6E6
+grid.linestyle:  -
+grid.linewidth:  0.7
+grid.alpha:      1.0
+
+# --- Ticks: outward, thin and black ---
+xtick.direction:   out
+ytick.direction:   out
+xtick.color:       000000
+ytick.color:       000000
+xtick.labelcolor:  black
+ytick.labelcolor:  black
+xtick.labelsize:   10.5
+ytick.labelsize:   10.5
+xtick.major.size:  4.0
+ytick.major.size:  4.0
+xtick.major.width: 0.6
+ytick.major.width: 0.6
+xtick.major.pad:   4.0
+ytick.major.pad:   4.0
+xtick.bottom:      True
+xtick.top:         False
+ytick.left:        True
+ytick.right:       False
+
+# --- Lines & markers ---
+lines.linewidth:       1.8
+lines.markersize:      4.5
+lines.markeredgewidth: 0.0
+lines.solid_capstyle:  round
+
+# --- Patches ---
+patch.linewidth:       0.7
+patch.edgecolor:       white
+patch.force_edgecolor: False
+
+# --- Legend: white fill, no border ---
+legend.frameon:        True
+legend.framealpha:     1.0
+legend.facecolor:      white
+legend.edgecolor:      none
+legend.fancybox:       False
+legend.loc:            best
+legend.fontsize:       10
+legend.borderpad:      0.5
+legend.handlelength:   1.8
+
+# --- Default image / heatmap colormap ---
+image.cmap: viridis
