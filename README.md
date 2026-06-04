@@ -1,7 +1,7 @@
 # stata-mpl
 
-[![PyPI](https://img.shields.io/pypi/v/stata-mpl.svg)](https://pypi.org/project/stata-mpl/)
-[![Python](https://img.shields.io/pypi/pyversions/stata-mpl.svg)](https://pypi.org/project/stata-mpl/)
+[![PyPI](https://img.shields.io/pypi/v/mpl-stata.svg)](https://pypi.org/project/mpl-stata/)
+[![Python](https://img.shields.io/pypi/pyversions/mpl-stata.svg)](https://pypi.org/project/mpl-stata/)
 [![Tests](https://github.com/lucasduthu/stata-mpl/actions/workflows/tests.yml/badge.svg)](https://github.com/lucasduthu/stata-mpl/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
@@ -26,12 +26,22 @@ Nothing global is changed permanently: everything stays inside the `with` block.
 ## Installation
 
 ```bash
-cd stata-mpl
-pip install -e .
+pip install mpl-stata
 ```
 
-Requires `matplotlib>=3.4`. For the seaborn integration: `pip install -e ".[seaborn]"`
-(needs `seaborn>=0.13`).
+For the seaborn wrappers (`boxplot`, `violinplot`, `heatmap`…):
+
+```bash
+pip install "mpl-stata[seaborn]"
+```
+
+Requires `matplotlib>=3.4`, Python ≥ 3.8.
+
+**Development install** (from the repo):
+
+```bash
+pip install -e ".[seaborn]"
+```
 
 ## seaborn — the recommended path
 
